@@ -47,6 +47,7 @@ class Reactor:
                         index_next.append(input_list.index(out))
                     if out == wanted_str:
                         count += 1
+
             index_start = index_next
             if len(index_next) == 0:
                 return count
