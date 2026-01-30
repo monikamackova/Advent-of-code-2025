@@ -7,7 +7,7 @@ class Reactor:
     def __init__(self, filename: str) -> None:
         self.filename = filename
 
-    def execute(self) -> tuple[int, int]:
+    def execute(self) -> int:
         data = self._load_txt_data()
         input_list, output_list = self._extract_data(data)
         part1_result = self._part1(input_list, output_list)
@@ -47,7 +47,6 @@ class Reactor:
                         index_next.append(input_list.index(out))
                     if out == wanted_str:
                         count += 1
-
             index_start = index_next
             if len(index_next) == 0:
                 return count
